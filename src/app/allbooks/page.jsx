@@ -6,9 +6,11 @@ export default async function BooksPage() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/books/add`);
   const books = await res.json();
 //  const books = [ ]
+//
   return (
     <div className="min-h-screen bg-gray-50 p-6">
       <div className="max-w-7xl mx-auto">
+
         <h1 className="text-3xl font-bold text-gray-800 mb-2  text-center">📚 Available Books</h1>
         <p className="text-gray-600 mb-8 text-center">Find your next great read from our collection</p>
 
