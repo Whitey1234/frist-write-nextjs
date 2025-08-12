@@ -25,7 +25,7 @@ export default function ContactSection() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Form submitted:', formData);
+   // console.log('Form submitted:', formData);
   };
 
   const handleChange = (e) => {

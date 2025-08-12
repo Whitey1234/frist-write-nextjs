@@ -88,10 +88,10 @@ export default function RegisterPage() {
       createUser(formData.email, formData.password)
       .then((result)=>{
 
-        console.log(result)
+       // console.log(result)
       })
       
-      console.log('Registration data:', formData);
+      //console.log('Registration data:', formData);
       
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
@@ -121,7 +121,7 @@ router.push('/')
     setIsLoading(true);
     gLogin()
      .then((result) =>{
-      console.log("google login", result.user)
+      //console.log("google login", result.user)
 
       toast.success(' Register sucessfully', {
 position: "top-right",

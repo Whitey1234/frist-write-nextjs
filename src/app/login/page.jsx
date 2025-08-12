@@ -38,7 +38,7 @@ transition: Bounce,
 router.push('/')
     })
     .catch ((err)=>{
-      const errorMassage = console.log(err.massage)
+      //const errorMassage = console.log(err.massage)
     })
   }
      const handleGoogleLogin =()=>{
@@ -60,7 +60,7 @@ router.push('/')
         
       })
       .catch((err)=>{
-          const errorMassage = console.log(err.massage)
+          //const errorMassage = console.log(err.massage)
       })
      
   }

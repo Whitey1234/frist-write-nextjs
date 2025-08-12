@@ -31,7 +31,7 @@ export async function POST(req) {
     const db = client.db("first-write"); //  DB name
 
     const requestBody = await req.json();
-    console.log("Backend received data:", requestBody);
+    //console.log("Backend received data:", requestBody);
 
     const { bookName, bookPhoto, subject, writerName, buy, details, addedBy } = requestBody;
 

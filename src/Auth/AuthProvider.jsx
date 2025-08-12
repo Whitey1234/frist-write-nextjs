@@ -69,7 +69,7 @@ const AuthProvider = ({ children }) => {
     //   getToken();
     });
     return () => {
-      console.log('Auth provider unmounting');
+     // console.log('Auth provider unmounting');
       unSubscribe();
     };
   }, []);
@@ -106,7 +106,7 @@ const AuthProvider = ({ children }) => {
 //       .then(res => setUserRole(res.data.role));
 //   }
 // }, [user]);
-console.log(user)
+//console.log(user)
 
   const authData = {
     createUser,
