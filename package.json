@@ -12,7 +12,6 @@
     "@heroui/navbar": "^2.2.22",
     "@heroui/system": "^2.4.20",
     "@heroui/theme": "^2.4.20",
-    "@nextui-org/react": "^2.6.11",
     "aos": "^2.3.4",
     "axios": "^1.11.0",
     "daisyui": "^5.0.50",
