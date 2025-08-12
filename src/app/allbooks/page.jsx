@@ -3,9 +3,9 @@ import { Pen, BookOpen, Star, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 
 export default async function BooksPage() {
-  // const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/books/add`);
-  // const books = await res.json();
- const books = [ ]
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/books/add`);
+  const books = await res.json();
+//  const books = [ ]
   return (
     <div className="min-h-screen bg-gray-50 p-6">
       <div className="max-w-7xl mx-auto">
