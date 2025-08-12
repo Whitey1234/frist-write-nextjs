@@ -1,6 +1,6 @@
 
 'use client'
-import Nav from "@/app/navbar/page";
+//nothingddd
 
 export default function MainLayout({ children }) {
   return (

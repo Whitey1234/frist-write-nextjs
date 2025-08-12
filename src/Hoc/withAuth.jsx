@@ -3,6 +3,7 @@ import { useContext, useEffect } from 'react';
 import { AuthContext } from '../Auth/AuthProvider';
 import { useRouter } from 'next/navigation';
 
+
 const withAuth = (WrappedComponent) => {
   const Wrapper = (props) => {
     const { user, loading } = useContext(AuthContext);
