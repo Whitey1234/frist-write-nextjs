@@ -164,56 +164,64 @@ router.push('/')
       {/* Mobile Menu */}  
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-base-100 shadow-md flex flex-col items-start p-4 lg:hidden">
-          <Link href="/" className="relative inline-block rounded-b-xl p-[2px] bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 group">
-  <div className="btn btn-ghost rounded-b-xl bg-white text-black group-hover:bg-gray-100 transition-colors duration-300">
+         <Link href="/" className="relative my-2 inline-block rounded-b-xl p-[2px] bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 group w-full ">
+  <div className="btn w-full  btn-ghost rounded-b-xl bg-white text-black group-hover:bg-gray-100 transition-colors duration-300 ">
     Home
   </div>
 </Link>
 
-      <a href="#" className="relative inline-block rounded-b-xl p-[1px] bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 group">
-  <div className="btn btn-ghost rounded-b-xl bg-white text-black group-hover:bg-gray-100 transition-colors duration-300">
-    Feature
+      <Link href={'/allbooks'} className="relative w-full inline-block rounded-b-xl p-[1px] bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 group">
+  <div className="btn w-full btn-ghost rounded-b-xl bg-white text-black group-hover:bg-gray-100 transition-colors duration-300">
+    Books
   </div>
-</a>
-
-     {
+</Link>
+ {
+  
   user ? (
-    <Link href={'/dashboard'} className="relative inline-block rounded-b-xl p-[1px] bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 group"> <div className="btn btn-ghost rounded-b-xl bg-white text-black group-hover:bg-gray-100 transition-colors duration-300">
+    <>
+    <Link href={'/dashboard'} className="relative my-2 w-full inline-block rounded-b-xl p-[1px] bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 group"> <div className="btn w-full btn-ghost rounded-b-xl bg-white text-black group-hover:bg-gray-100 transition-colors duration-300">
     Dashboard
   </div></Link>
+   <Link href="/contact" className="relative inline-block rounded-b-xl w-full p-[1px] bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 group">
+  <div className="btn w-full btn-ghost rounded-b-xl bg-white text-black group-hover:bg-gray-100 transition-colors duration-300">
+    Contact
+  </div>
+</Link>
+    </>
+    
+  
   ) :(
     <>
     
-   <a href="#" className="relative inline-block rounded-b-xl p-[1px] bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 group">
-  <div className="btn btn-ghost rounded-b-xl bg-white text-black group-hover:bg-gray-100 transition-colors duration-300">
-    prching
+   <Link href="/aboutus" className="relative  my-2 w-full inline-block rounded-b-xl p-[1px] bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 group">
+  <div className="btn  w-full btn-ghost rounded-b-xl bg-white text-black group-hover:bg-gray-100 transition-colors duration-300">
+    About US
   </div>
-</a>
+</Link>
 
-        <a href="#" className="relative inline-block rounded-b-xl p-[1px] bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 group">
-  <div className="btn btn-ghost rounded-b-xl bg-white text-black group-hover:bg-gray-100 transition-colors duration-300">
+        <Link href="/contact" className="relative    w-full inline-block rounded-b-xl p-[1px] bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 group">
+  <div className="btn w-full btn-ghost rounded-b-xl bg-white text-black group-hover:bg-gray-100 transition-colors duration-300">
     Contact
   </div>
-</a>
+</Link>
 
        
   </>  
   )
  }
      
-          {
+
+       {
               user ? (
                 <button
                 onClick={handlelogout}
-                className='btn btn-primary bg-gradient-to-r  from-pink-500 via-purple-500 rounded-2xl ml-6'>
+                className='btn w-full  btn-primary my-2 bg-gradient-to-r  from-pink-500 via-purple-500 rounded-2xl '>
                   Logout
                 </button>
               ) : (
-                   <Link href={'/login'} className='btn btn-primary  bg-gradient-to-r from-pink-500 via-purple-500 rounded-2xl ml-6 '>Login</Link>
+                   <Link href={'/login'} className='btn btn-primary my-2  w-full bg-gradient-to-r from-pink-500 via-purple-500 rounded-2xl '>Login</Link>
               )
           }
-
-
       
         </div>
       )}
