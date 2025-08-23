@@ -1,6 +1,6 @@
 'use client'
 import Lottie from 'lottie-react'
-import React, { use, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import loginAnimation from  '../../../public/animation/G82hzrRhIr.json'
 import Link from 'next/link'
 import { AuthContext } from '@/Auth/AuthProvider'
@@ -16,9 +16,10 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const { login,gLogin} = use(AuthContext)
+  const { login,gLogin} = useContext(AuthContext)
   const handleLogin = (e)=>{
     e.preventDefault();
+    console.log('Email:', email, 'Password:', password);
     login(email,password)
     .then((result)=>{
       const user = result.user ;
@@ -38,7 +39,7 @@ transition: Bounce,
 router.push('/')
     })
     .catch ((err)=>{
-      //const errorMassage = console.log(err.massage)
+      const errorMassage = console.log(err.massage)
     })
   }
      const handleGoogleLogin =()=>{
@@ -60,7 +61,7 @@ router.push('/')
         
       })
       .catch((err)=>{
-          //const errorMassage = console.log(err.massage)
+          const errorMassage = console.log(err.massage)
       })
      
   }
