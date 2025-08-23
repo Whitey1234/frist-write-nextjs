@@ -33,8 +33,9 @@ router.push('/')
     }
    // console.log(user)
   return (
-     <div className="navbar bg-base-100 sticky top-0 z-50 shadow-md">
-      <div className="flex-1">
+     <div className="navbar bg-base-100 sticky top-0 z-50 shadow-md ">
+      
+      <div className="flex-1 ">
      <Link href={"/"}
   className="
     text-3xl font-extrabold
